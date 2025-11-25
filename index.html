@@ -3,12 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Asignación de Mesas</title>
+  <style>
+    /* Fondo con imagen */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Contenedor con efecto */
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: 100px auto;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #f1c40f;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    input {
+      padding: 12px;
+      width: 80%;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #resultado {
+      margin-top: 25px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #2ecc71;
+      text-shadow: 1px 1px 3px #000;
+    }
+  </style>
 </head>
 <body>
-  <h2>Consulta tu mesa</h2>
-  <input type="text" id="nombre" placeholder="Escribe tu nombre">
-  <button onclick="buscarMesa()">Buscar</button>
-  <p id="resultado"></p>
+  <div class="container">
+    <h2>Consulta tu mesa</h2>
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    <br>
+    <button onclick="buscarMesa()">Buscar</button>
+    <p id="resultado"></p>
+  </div>
 
   <script>
     const datos = {
@@ -103,7 +167,7 @@
       const nombre = document.getElementById("nombre").value.trim();
       const mesa = datos[nombre];
       document.getElementById("resultado").innerText = 
-        mesa ? `La mesa asignada es: ${mesa}` : "Nombre no encontrado";
+        mesa ? `La mesa asignada es: ${mesa}` : "⚠️ Nombre no encontrado";
     }
   </script>
 </body>
