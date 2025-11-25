@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Asignación de Mesas</title>
+</head>
+<body>
+  <h2>Consulta tu mesa</h2>
+  <input type="text" id="nombre" placeholder="Escribe tu nombre">
+  <button onclick="buscarMesa()">Buscar</button>
+  <p id="resultado"></p>
+
+  <script>
+    const datos = {
+      "Hernan Hermida": 1,
+      "Agustin Colocho": 1,
+      "Viviana Tupac": 1,
+      "Juan Esquivel": 1,
+      "Almagro, Martin": 1,
+      "Sergio de Jesus Melean": 1,
+      "Esteban Chiama": 1,
+      "Ramon Pintos": 2,
+      "Gael Rocha": 2,
+      "Jose Laiz": 2,
+      "Hector Kashiwagi": 2,
+      "Lomastro, Leonardo": 2,
+      "Leandro A. Bonn": 2,
+      "Giuliana Ruffa": 2,
+      "Natasha Castañeda": 3,
+      "Jose Monteros": 3,
+      "Nicolas Costa": 3,
+      "Hernan Nicolas": 3,
+      "Musolino, Augusto G.": 3,
+      "Lisandro Robles": 3,
+      "Rizzo, Alejandro": 3,
+      "Joaquin Val": 4,
+      "Joaquin Sanchez": 4,
+      "Tomas Triler": 4,
+      "Franco Cristalino": 4,
+      "Fonseca Jorge": 4,
+      "Andrés Sukanec": 4,
+      "Ivan simonavicius": 4,
+      "Ramiro Gorbaran": 5,
+      "Daniela Horbayczuk": 5,
+      "Lucas Lancioni": 5,
+      "Agustin Primon": 5,
+      "Dimas Bosch": 5,
+      "Ajargo, Nicolas": 5,
+      "Gavinowich, Gabriel": 5,
+      "Alejandro Gallo": 6,
+      "Valeri Rivas": 6,
+      "Mariano Marinelli": 6,
+      "Juan Pinasco": 6,
+      "Leonardo Ferrazzo": 6,
+      "Mariano Caballero": 6,
+      "Javier Espir": 6,
+      "Pablo Dardano": 7,
+      "Marcial Espinola": 7,
+      "Santiago Palozzo": 7,
+      "Sebastian Carlozzi": 7,
+      "Santiago Rotger": 7,
+      "Lara Cordoba": 7,
+      "Magalí Gomez": 7,
+      "Daniel Montepagano": 7,
+      "Jhonny Joel": 8,
+      "Juan Garcia": 8,
+      "Ivan Schneiter": 8,
+      "Emiliano Pascual": 8,
+      "Medina, Oscar": 8,
+      "Franco Gianmuso": 8,
+      "Facundo Garcia Miraglia": 8,
+      "Sofia Barbera": 9,
+      "Guadalupe Canton": 9,
+      "Luciano Debenedetti": 9,
+      "Ottaviano, Silvio A.": 9,
+      "Agustin Rovero": 9,
+      "Amalia Delucchi": 9,
+      "Agustina Germinario": 9,
+      "Yesica Cardozo": 10,
+      "Ezequiel Guzzetti": 10,
+      "Chistian Jimenez": 10,
+      "Cendali, Gerardo": 10,
+      "Lucas Meoli": 10,
+      "Patricio Cano": 10,
+      "Mario Vega": 10,
+      "Adrian Castez": 11,
+      "Leandro Piscitelli": 11,
+      "Cristian Grossi": 11,
+      "Pupillo, Esteban": 11,
+      "David, Pedro": 11,
+      "Pablo Rodrigo D'angelo": 11,
+      "Claudio Gomez": 11,
+      "Diego Chiarini": 12,
+      "Javier Gomez": 12,
+      "Adriana Calderon": 12,
+      "Franco Pagani": 12,
+      "Juan Manuel Hernández": 12,
+      "Guillermo Vittorello": 12,
+      "Esteban Filipovic": 12
+    };
+
+    function buscarMesa() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const mesa = datos[nombre];
+      document.getElementById("resultado").innerText = 
+        mesa ? `La mesa asignada es: ${mesa}` : "Nombre no encontrado";
+    }
+  </script>
+</body>
+</html>
