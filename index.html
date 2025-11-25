@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Asignación de Mesas</title>
+  <!-- Meta viewport para móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -12,6 +14,10 @@
       background-size: cover;
       color: #fff;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Centrado vertical */
     }
 
     .container {
@@ -19,7 +25,7 @@
       padding: 40px;
       border-radius: 12px;
       max-width: 500px;
-      margin: 100px auto;
+      width: 90%; /* Se adapta en móviles */
     }
 
     h2 {
@@ -31,7 +37,7 @@
 
     input {
       padding: 12px;
-      width: 80%;
+      width: 100%;
       border: none;
       border-radius: 8px;
       font-size: 1.1em;
@@ -48,6 +54,7 @@
       color: #fff;
       cursor: pointer;
       transition: 0.3s;
+      width: 100%; /* Botón ocupa todo el ancho en móviles */
     }
 
     button:hover {
@@ -60,6 +67,25 @@
       font-weight: bold;
       color: #2ecc71;
       text-shadow: 1px 1px 3px #000;
+    }
+
+    /* Media queries para pantallas pequeñas */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+
+      input, button {
+        font-size: 1em;
+      }
+
+      #resultado {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -171,3 +197,4 @@
   </script>
 </body>
 </html>
+
